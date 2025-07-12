@@ -1,8 +1,15 @@
-const Page = async () => {
+'use client';
+
+import { useTRPC } from "@/trpc/client";
+import { useQuery } from "@tanstack/react-query";
+
+const Page = () => {
+  const trpc = useTRPC();
+  const { data } = useQuery(trpc.hello.queryOptions({ text: 'Vinh Nguyen' }));
 
   return (
     <div>
-      Hello world!
+      {JSON.stringify(data)}
     </div>
   );
 }
