@@ -7,6 +7,17 @@ import { baseProcedure, createTRPCRouter } from '@/trpc/init';
 import { TRPCError } from '@trpc/server';
 
 export const projectsRouter = createTRPCRouter({
+  getMany: baseProcedure
+    .query(async () => {
+      const projects = await prisma.project.findMany({
+        orderBy: {
+          updatedAt: 'asc',
+        },
+      });
+
+      return projects;
+    }),
+
   getOne: baseProcedure
     .input(
       z.object({
