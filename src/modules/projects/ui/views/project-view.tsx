@@ -11,6 +11,7 @@ import { ProjectHeader } from "../components/project-header";
 import { MessagesContainer } from "../components/messages-container";
 
 import { Button } from "@/components/ui/button";
+import { UserControl } from "@/components/user-control";
 import { FileExplorer } from "@/components/file-explorer";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "@/components/ui/resizable";
@@ -73,6 +74,7 @@ export const ProjectView = ({ projectId }: Props) => {
                     <CrownIcon /> Upgrade
                   </Link>
                 </Button>
+                <UserControl />
               </div>
             </div>
 
