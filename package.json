@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@clerk/nextjs": "^6.27.1",
@@ -66,7 +67,6 @@
     "react-hook-form": "^7.60.0",
     "react-resizable-panels": "^3.0.3",
     "react-textarea-autosize": "^8.5.9",
-    "recharts": "^3.0.2",
     "server-only": "^0.0.1",
     "sonner": "^2.0.6",
     "superjson": "^2.2.2",
